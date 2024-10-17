@@ -5,6 +5,8 @@ import icon from "astro-icon";
 
 import node from "@astrojs/node";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://agency-website-astro.netlify.app/',
@@ -21,8 +23,5 @@ export default defineConfig({
   },
 
   integrations: [icon()],
-
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: netlify(),
 });
