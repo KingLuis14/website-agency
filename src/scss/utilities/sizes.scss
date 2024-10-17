@@ -1,0 +1,19 @@
+.wrapper{
+    width: var(--wrapper-width);
+    margin-inline: auto;
+
+    > *:not(:first-child){
+        margin-top:  calc(var(--padding-section) / 2);
+    }
+}
+.section-page{
+    padding-block: var(--padding-section);
+
+    
+}
+
+// .section-page-space > *:not(:first-child){
+   
+// }
+
+

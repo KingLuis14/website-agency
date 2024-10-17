@@ -1,0 +1,71 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<article>
+  <a href="#" class="container">
+    <div class="container__img">
+      <img
+        src="https://cdn.prod.website-files.com/667f26085470c91a9709d00b/667f26085470c91a9709d0ec_pm.webp"
+        alt=""
+      />
+    </div>
+    <div class="container__content">
+      <h3 class="container__title">
+        Brand Loyalty Through Personalized Audience Marketing
+      </h3>
+      <p class="text-lines lines--2 color-white-400">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ex
+        excepturi eum, atque magnam odit.
+      </p>
+      <button class="container__button color-blue-800"
+        >Ver más <Icon name={"link-arrow"} size={15} />
+      </button>
+    </div>
+  </a>
+</article>
+
+<style lang="scss">
+  .container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1.5rem;
+
+    &:hover {
+      .container__title {
+        color: var(--blue-700);
+      }
+
+      .container__img > img {
+        transform: scale(1.2);
+      }
+    }
+
+    &__img {
+      overflow: hidden;
+      border-radius: 1.5rem;
+
+      > img {
+        aspect-ratio: 1;
+        transform: scale(1);
+        transition: transform 0.5s;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: start;
+    }
+
+    &__button {
+      // background-color: rgb(8, 8, 8);
+      padding-top: .5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 500;
+    }
+  }
+</style>

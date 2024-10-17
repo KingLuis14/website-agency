@@ -1,0 +1,30 @@
+---
+import CardCourse from "@/components/CardCourse.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="section-page">
+  <div class="wrapper">
+    <h2 class="title-section">Mira los cursos que tenemos para tí !</h2>
+
+    <div class="container">
+      <CardCourse />
+      <CardCourse />
+      <CardCourse />
+    </div>
+
+    <a href="#" class="button button--accent button--center">Todos los cursos <Icon name={"link-arrow"} size={15} /></a>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2.5rem 1.5rem;
+
+    @media (width >= 768px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

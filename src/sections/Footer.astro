@@ -1,0 +1,132 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="section-page bg-color-blue-700 color-white-000">
+  <div class="wrapper container">
+    <nav class="container__navigation">
+      
+      <div class="container__logo">
+        <h3> <Icon name="facebook" size={35} class="color-green-500" />Logotipo</h3>
+        <p>Fueling Your Brand's Brilliance</p>
+      </div>
+
+      <div class="container__groupNav">
+        <h3>Cursos</h3>
+        <ul class="container__list">
+          <li><a href="#">Ofimatica</a></li>
+          <li><a href="#">Diseño web</a></li>
+          <li><a href="#">Diseño gráfico</a></li>
+          <li><a href="#">WordPress</a></li>
+          <li><a href="#">Excel</a></li>
+          <li><a href="#">Base de Datos</a></li>
+          <li><a href="#">Cajero bancario</a></li>
+          <li><a href="#">Programacion</a></li>
+        </ul>
+      </div>
+
+      <div class="container__groupNav">
+        <h3>Servicios</h3>
+        <ul class="container__list">
+          <li><a href="#">Educación online</a></li>
+          <li><a href="#">Creacion de Paginas web</a></li>
+        </ul>
+      </div>
+
+      <div class="container__groupNav">
+        <h3>Empresa</h3>
+        <ul class="container__list">
+          <li>informes@ift.pe</li>
+          <li>
+            <a href="#">Jr Hipólito Unanue N° 393 Cercado de Lima - Perú</a>
+          </li>
+          <li><a href="#">980816746</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container__copy">
+      <small>© Catalysty 2024</small>
+      <aside>
+        <a href="#">
+          <Icon name="facebook" class="color-green-500" size={25} />
+        </a>
+        <a href="#">
+          <Icon name="Instagram" class="color-green-500" size={25} />
+        </a>
+        <a href="#">
+          <Icon name="Tiktok" class="color-green-500" size={25} />
+        </a>
+        <a href="#">
+          <Icon name="Youtube" class="color-green-500" size={25} />
+        </a>
+      </aside>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  .container {
+    &__navigation {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding-bottom: 2rem;
+      gap: 2rem 1rem;
+
+      > :first-child{
+       
+
+        @media (width < 768px) {
+          grid-column: span 2;
+
+        }
+      }
+
+      @media (width >= 768px) {
+        grid-template-columns: min(35%, 500px) repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    &__logo{
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      
+      > h3 {
+        display: flex;
+      align-items: center;
+      gap: .5rem;
+      }
+    }
+
+    &__copy {
+      padding-top: 2rem;
+      border-top: 2px rgb(183, 183, 183) solid;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // background-color: cadetblue;
+
+      > aside {
+        display: flex;
+        gap: 0.7rem;
+      }
+    }
+
+    &__groupNav {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      > h3 {
+        font-weight: 500;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      color: var(--white-100);
+    }
+  }
+</style>
