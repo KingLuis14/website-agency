@@ -1,0 +1,52 @@
+---
+import { getImage } from "astro:assets";
+import myBackground from "@/assets/heroimg.png";
+
+const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
+
+const desktopImg = await getImage({
+    src: myBackground,
+    format: "webp",
+    width: 400,
+    quality: 60,
+});
+
+---
+
+
+<section class="hero-img color-white-000" style={`background-image: url(${desktopImg.src});`}>
+    <div class="wrapper container">
+        <h1 class="fs-super-title-2" style="line-height: 1.1;" >Instituto de Formacion Tecnologica</h1>
+        <p class="color-white-200">Una empresa especializada en capacitaciones tecnológicas, ofrecemos programas de formación de vanguardia en diversas áreas de la tecnología</p>
+        <a href="#" class="button button--accent color-black-000">Más Información</a>
+    </div>
+</section>
+
+<style lang="scss">
+
+   .hero-img{
+    height: 80svh;
+    // padding-block: 8rem 16rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #010c74;
+
+    @media (width >= 768px){
+        height: auto;
+        padding-block: 8rem 16rem;
+        }
+
+    }
+
+    .container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25em;
+        text-align: center;
+        max-width: 75ch;
+    }
+
+</style>

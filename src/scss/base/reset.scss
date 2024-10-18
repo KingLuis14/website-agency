@@ -83,6 +83,10 @@ button {
   padding: 0;
 }
 
+input[type="submit"]{
+  border: none;
+}
+
 h1,
 .fs-title1 {
   font-size: var(--title-1);

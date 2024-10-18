@@ -4,7 +4,27 @@ import Formulario from "@/components/Formulario.astro";
 
 ---
 <section class="section-page">
-    <div class="wrapper">
+    <div class="wrapper container">
+        <img src="https://cdn.prod.website-files.com/66d166f85483fbaf58f4dddb/66dc38c006db0a58c13e847c_Form%20Image-p-500.webp" alt="foto">
         <Formulario />
     </div>
 </section>
+
+<style lang="scss">
+
+    .container{
+        display: grid;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 4px 60px #00000014;
+        gap: 2.25rem;
+        padding: 2rem;
+        border-radius: .5rem;
+        
+
+        @media (width >= 768px){
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-top: -250px;
+        }
+    }
+
+</style>

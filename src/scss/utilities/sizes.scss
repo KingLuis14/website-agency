@@ -2,14 +2,22 @@
     width: var(--wrapper-width);
     margin-inline: auto;
 
-    > *:not(:first-child){
-        margin-top:  calc(var(--padding-section) / 2);
-    }
+    
 }
 .section-page{
     padding-block: var(--padding-section);
 
+    &--counters{
+        padding-block: clamp(1.5rem, 2.9091vw + .8182rem, 3rem);
+    }
+
     
+}
+
+.section-page-flow{
+    > *:not(:first-child){
+        margin-top:  calc(var(--padding-section) / 2);
+    }
 }
 
 // .section-page-space > *:not(:first-child){
