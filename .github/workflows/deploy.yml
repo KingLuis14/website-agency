@@ -1,6 +1,6 @@
-on: 
-    push:
-      branches: ['main']
+on:
+  repository_dispatch:
+    types: [cpanel_deploy]
       
 jobs:
     web-deploy:
